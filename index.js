@@ -26,12 +26,12 @@ const app = express();
 app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: { origin: "https://split-frontend-eight.vercel.app",credentials:true }, // Set frontend origin for security
+  cors: { origin: "*",credentials:true }, // Set frontend origin for security
 });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 app.use(cors({
-  origin: 'https://split-frontend-eight.vercel.app', // or your frontend origin
+  origin: '*', // or your frontend origin
   credentials: true,
 }));
 
