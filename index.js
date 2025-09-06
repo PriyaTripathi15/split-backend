@@ -50,6 +50,12 @@ app.use("/api/stripe", stripeRoutes);
 app.use('/api/notification', noticationRoutes);
 app.use('/api/stats',statsRoutes);
 
+app.get('/', (req, res) => {
+   res.status(200).json({
+    message: "Welcome to the SplitIt API"
+   })
+})
+
 io.on("connection", (socket) => {
   console.log("⚡ New client connected:", socket.id);
 
