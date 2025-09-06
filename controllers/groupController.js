@@ -141,7 +141,7 @@ export const sendGroupInvites = async (req, res) => {
       return res.status(400).json({ message: "No pending invites to send." });
     }
 
-    const baseUrl = process.env.CLIENT_URL || "http://localhost:5173";
+    const baseUrl = "https://split-frontend-5dq8.vercel.app/";
     const failedEmails = [];
 
     for (const email of group.invites) {

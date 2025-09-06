@@ -115,7 +115,7 @@ export const forgotPassword = async (req, res) => {
     });
 
     // Password reset link (change domain/port as needed)
-    const resetLink = `http://localhost:5173/reset-password/${token}`;
+    const resetLink = `https://split-frontend-5dq8.vercel.app/reset-password/${token}`;
 
     // Configure nodemailer transporter
     const transporter = nodemailer.createTransport({
